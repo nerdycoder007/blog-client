@@ -8,7 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {},
-      fontFamily: {},
+      fontFamily: {
+        heading: ["Inter", "sans-serif"],
+        text: ["Noto Sans", "sans-serif"],
+        content: ["Merriweather", "serif"],
+      },
     },
 
     screens: {
