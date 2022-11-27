@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-100 p-[0.1px] text-slate-900 dark:bg-slate-900 dark:text-slate-200;
+  }
+  a {
+    @apply no-underline;
+  }
+}
+@layer components {
+  .icon {
+    @apply h-4 w-4;
+  }
+  .styledLink {
+    @apply bg-gradient-to-r from-cyan-200 to-cyan-200 bg-[length:0px_5px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_5px] dark:from-cyan-200 dark:to-cyan-200;
+  }
+  .heading {
+    @apply font-content text-sm font-bold text-slate-700 dark:text-slate-200 md:text-base  lg:text-lg;
+  }
+  .section-heading {
+    @apply font-content text-xl sm:text-2xl md:text-3xl lg:text-5xl;
+  }
+  .text {
+    @apply font-heading text-[12px] text-gray-500 dark:text-gray-300;
+  }
+  .form-input {
+    @apply mt-1 block w-full  rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-slate-700 dark:text-gray-200 sm:text-sm;
+  }
+  .blob-box {
+    @apply absolute  h-64 w-64  animate-blob rounded-full opacity-80 mix-blend-multiply blur-2xl filter dark:opacity-30 dark:mix-blend-normal;
+  }
+}
+@layer utilities {
+  .animation-delay-2 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4 {
+    animation-delay: 4s;
+  }
+}
